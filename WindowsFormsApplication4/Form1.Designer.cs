@@ -32,13 +32,18 @@
             this.Тёрочка = new System.Windows.Forms.Button();
             this.Мой_кабинет = new System.Windows.Forms.Button();
             this.Скины = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Magazin
             // 
-            this.Magazin.Location = new System.Drawing.Point(-1, 49);
+            this.Magazin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Magazin.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Magazin.Location = new System.Drawing.Point(0, 0);
+            this.Magazin.Margin = new System.Windows.Forms.Padding(0);
             this.Magazin.Name = "Magazin";
-            this.Magazin.Size = new System.Drawing.Size(145, 23);
+            this.Magazin.Size = new System.Drawing.Size(143, 25);
             this.Magazin.TabIndex = 0;
             this.Magazin.Text = "Магазин";
             this.Magazin.UseVisualStyleBackColor = true;
@@ -46,9 +51,12 @@
             // 
             // Тёрочка
             // 
-            this.Тёрочка.Location = new System.Drawing.Point(142, 49);
+            this.Тёрочка.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Тёрочка.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Тёрочка.Location = new System.Drawing.Point(143, 0);
+            this.Тёрочка.Margin = new System.Windows.Forms.Padding(0);
             this.Тёрочка.Name = "Тёрочка";
-            this.Тёрочка.Size = new System.Drawing.Size(145, 23);
+            this.Тёрочка.Size = new System.Drawing.Size(143, 25);
             this.Тёрочка.TabIndex = 1;
             this.Тёрочка.Text = "Тёрочка";
             this.Тёрочка.UseVisualStyleBackColor = true;
@@ -56,9 +64,12 @@
             // 
             // Мой_кабинет
             // 
-            this.Мой_кабинет.Location = new System.Drawing.Point(285, 49);
+            this.Мой_кабинет.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Мой_кабинет.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Мой_кабинет.Location = new System.Drawing.Point(286, 0);
+            this.Мой_кабинет.Margin = new System.Windows.Forms.Padding(0);
             this.Мой_кабинет.Name = "Мой_кабинет";
-            this.Мой_кабинет.Size = new System.Drawing.Size(145, 23);
+            this.Мой_кабинет.Size = new System.Drawing.Size(143, 25);
             this.Мой_кабинет.TabIndex = 2;
             this.Мой_кабинет.Text = "Мой кабинет";
             this.Мой_кабинет.UseVisualStyleBackColor = true;
@@ -66,13 +77,39 @@
             // 
             // Скины
             // 
-            this.Скины.Location = new System.Drawing.Point(428, 49);
+            this.Скины.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Скины.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Скины.Location = new System.Drawing.Point(429, 0);
+            this.Скины.Margin = new System.Windows.Forms.Padding(0);
             this.Скины.Name = "Скины";
-            this.Скины.Size = new System.Drawing.Size(145, 23);
+            this.Скины.Size = new System.Drawing.Size(143, 25);
             this.Скины.TabIndex = 4;
             this.Скины.Text = "Скины";
             this.Скины.UseVisualStyleBackColor = true;
             this.Скины.Click += new System.EventHandler(this.Скины_Click);
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.Control;
+            this.tableLayoutPanel1.ColumnCount = 4;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.Controls.Add(this.Magazin, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.Тёрочка, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.Мой_кабинет, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.Скины, 3, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 51);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(572, 291);
+            this.tableLayoutPanel1.TabIndex = 5;
             // 
             // Ya_Terochka
             // 
@@ -81,12 +118,10 @@
             this.BackgroundImage = global::WindowsFormsApplication4.Properties.Resources.ytrk_mini;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(572, 342);
-            this.Controls.Add(this.Скины);
-            this.Controls.Add(this.Мой_кабинет);
-            this.Controls.Add(this.Тёрочка);
-            this.Controls.Add(this.Magazin);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Ya_Terochka";
             this.Text = "Ya_Terochka";
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -97,6 +132,7 @@
         private System.Windows.Forms.Button Тёрочка;
         private System.Windows.Forms.Button Мой_кабинет;
         private System.Windows.Forms.Button Скины;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }
 

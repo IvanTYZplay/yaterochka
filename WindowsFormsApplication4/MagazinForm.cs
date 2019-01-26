@@ -16,5 +16,44 @@ namespace WindowsFormsApplication4
         {
             InitializeComponent();
         }
+
+        private void MagazinForm_Load(object sender, EventArgs e)
+        {
+            this.Controls.Clear();
+            this.Controls.Add(productsPanel1);
+        }
+
+        /// <summary>
+        /// 1 страница
+        /// </summary>
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Controls.Clear();
+            this.Controls.Add(productsPanel1);
+        }
+
+        /// <summary>
+        /// 2 страница
+        /// </summary>
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Controls.Clear();
+            this.Controls.Add(productsPanel2);
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
