@@ -125,6 +125,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Ya_Terochka";
             this.Text = "Ya_Terochka";
+            this.Load += new System.EventHandler(this.Ya_Terochka_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
