@@ -20,3 +20,15 @@ C:\Users\Student\Desktop\yaterochka-master\WindowsFormsApplication4\obj\Debug\Wi
 C:\Users\Student\Desktop\yaterochka-master\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.My_Kabinet.resources
 C:\Users\Student\Desktop\yaterochka-master\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Skins.resources
 C:\Users\Student\Desktop\yaterochka-master\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Terochka.resources
+C:\Users\Student\1\yaterochka\WindowsFormsApplication4\bin\Debug\WindowsFormsApplication4.exe.config
+C:\Users\Student\1\yaterochka\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.exe
+C:\Users\Student\1\yaterochka\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.pdb
+C:\Users\Student\1\yaterochka\WindowsFormsApplication4\bin\Debug\WindowsFormsApplication4.exe
+C:\Users\Student\1\yaterochka\WindowsFormsApplication4\bin\Debug\WindowsFormsApplication4.pdb
+C:\Users\Student\1\yaterochka\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Ya_Terochka.resources
+C:\Users\Student\1\yaterochka\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.MagazinForm.resources
+C:\Users\Student\1\yaterochka\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.My_Kabinet.resources
+C:\Users\Student\1\yaterochka\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Properties.Resources.resources
+C:\Users\Student\1\yaterochka\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Skins.resources
+C:\Users\Student\1\yaterochka\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Terochka.resources
+C:\Users\Student\1\yaterochka\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.csproj.GenerateResource.Cache
