@@ -17,8 +17,10 @@ namespace WindowsFormsApplication4
         {
             InitializeComponent();
 
-
-            pictureBox1.Image = Skins.terka.Image;
+            if (Skins.terka != null)
+            {
+                pictureBox1.Image = Skins.terka.Image;
+            }
 
             System.Drawing.Drawing2D.GraphicsPath gp = BuildTransparencyPath(pictureBox1);
             pictureBox1.Region = new Region(gp);
