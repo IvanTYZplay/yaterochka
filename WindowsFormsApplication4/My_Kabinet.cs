@@ -16,5 +16,16 @@ namespace WindowsFormsApplication4
         {
             InitializeComponent();
         }
+
+        private void My_Kabinet_Load(object sender, EventArgs e)
+        {
+            int x = 0;
+            foreach (PictureBox pb in MagazinForm.tovary)
+            {
+                pb.Location = new Point(x, 50);
+                Controls.Add(pb);
+                x = x + pb.Size.Width;
+            }
+        }
     }
 }

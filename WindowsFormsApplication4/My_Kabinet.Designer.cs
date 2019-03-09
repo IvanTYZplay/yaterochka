@@ -39,6 +39,7 @@
             this.ClientSize = new System.Drawing.Size(572, 342);
             this.Name = "My_Kabinet";
             this.Text = "My_Kabinet";
+            this.Load += new System.EventHandler(this.My_Kabinet_Load);
             this.ResumeLayout(false);
 
         }

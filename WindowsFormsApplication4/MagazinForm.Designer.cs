@@ -53,7 +53,6 @@
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -104,7 +103,7 @@
             this.pictureBox2.Size = new System.Drawing.Size(144, 166);
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox3
             // 
@@ -115,7 +114,7 @@
             this.pictureBox3.Size = new System.Drawing.Size(129, 166);
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox4
             // 
@@ -126,7 +125,7 @@
             this.pictureBox4.Size = new System.Drawing.Size(60, 166);
             this.pictureBox4.TabIndex = 4;
             this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox5
             // 
@@ -137,7 +136,7 @@
             this.pictureBox5.Size = new System.Drawing.Size(109, 166);
             this.pictureBox5.TabIndex = 5;
             this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // productsPanel1
             // 
@@ -170,7 +169,6 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Location = new System.Drawing.Point(1, 32);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -232,6 +230,7 @@
             this.pictureBox8.Size = new System.Drawing.Size(94, 152);
             this.pictureBox8.TabIndex = 4;
             this.pictureBox8.TabStop = false;
+            this.pictureBox8.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox9
             // 
@@ -242,6 +241,7 @@
             this.pictureBox9.Size = new System.Drawing.Size(171, 152);
             this.pictureBox9.TabIndex = 3;
             this.pictureBox9.TabStop = false;
+            this.pictureBox9.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox7
             // 
@@ -252,6 +252,7 @@
             this.pictureBox7.Size = new System.Drawing.Size(149, 152);
             this.pictureBox7.TabIndex = 2;
             this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // buttonNazad2
             // 
@@ -262,7 +263,7 @@
             this.buttonNazad2.TabIndex = 1;
             this.buttonNazad2.Text = "Назад";
             this.buttonNazad2.UseVisualStyleBackColor = true;
-            this.buttonNazad2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonNazad2.Click += new System.EventHandler(this.page1_Click);
             // 
             // pictureBox6
             // 
@@ -273,6 +274,7 @@
             this.pictureBox6.Size = new System.Drawing.Size(138, 152);
             this.pictureBox6.TabIndex = 0;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // tabPage3
             // 
@@ -317,6 +319,7 @@
             this.pictureBox11.Size = new System.Drawing.Size(171, 152);
             this.pictureBox11.TabIndex = 11;
             this.pictureBox11.TabStop = false;
+            this.pictureBox11.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox12
             // 
@@ -327,6 +330,7 @@
             this.pictureBox12.Size = new System.Drawing.Size(149, 152);
             this.pictureBox12.TabIndex = 10;
             this.pictureBox12.TabStop = false;
+            this.pictureBox12.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox13
             // 
@@ -337,16 +341,7 @@
             this.pictureBox13.Size = new System.Drawing.Size(138, 152);
             this.pictureBox13.TabIndex = 9;
             this.pictureBox13.TabStop = false;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(567, 284);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "tabPage4";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            this.tabPage4.Click += new System.EventHandler(this.productsPanel4_Click);
+            this.pictureBox13.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // MagazinForm
             // 
@@ -404,7 +399,6 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.Button buttonDalshe2;

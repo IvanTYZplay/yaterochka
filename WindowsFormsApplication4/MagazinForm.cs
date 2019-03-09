@@ -12,6 +12,8 @@ namespace WindowsFormsApplication4
 {
     public partial class MagazinForm : Form
     {
+        public static List<PictureBox> tovary = new List<PictureBox>();
+
         public MagazinForm()
         {
             InitializeComponent();
@@ -27,7 +29,7 @@ namespace WindowsFormsApplication4
         /// <summary>
         /// 1 страница
         /// </summary>
-        private void button2_Click(object sender, EventArgs e)
+        private void page1_Click(object sender, EventArgs e)
         {
             this.Controls.Clear();
             this.Controls.Add(productsPanel1);
@@ -42,26 +44,6 @@ namespace WindowsFormsApplication4
             this.Controls.Clear();
             this.Controls.Add(productsPanel2);
             MagazinForm_Resize(null, null);
-        }
-
-        private void pictureBox5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox10_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -86,19 +68,14 @@ namespace WindowsFormsApplication4
 
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
+            PictureBox pb = (PictureBox)sender;
+            if (tovary.Contains(pb) == false)
+            {
+                tovary.Add(pb);
+            }
         }
 
         private void productsPanel1_Paint(object sender, PaintEventArgs e)

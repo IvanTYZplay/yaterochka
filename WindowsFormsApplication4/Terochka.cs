@@ -66,7 +66,7 @@ namespace WindowsFormsApplication4
         private void timer1_Tick(object sender, EventArgs e)
         {
             pictureBox2.Location = new Point(
-                pictureBox1.Location.X + pictureBox1.Size.Width - 200,
+                pictureBox1.Location.X + pictureBox1.Size.Width - 220,
                 pictureBox2.Location.Y + (rnd.Next() % 7) - (rnd.Next() % 7));
         }
 
