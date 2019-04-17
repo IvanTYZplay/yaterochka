@@ -34,7 +34,7 @@
             this.Скины = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.saloLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -125,14 +125,14 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // label1
+            // saloLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(426, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "салоcoin :";
+            this.saloLabel.AutoSize = true;
+            this.saloLabel.Location = new System.Drawing.Point(426, 18);
+            this.saloLabel.Name = "saloLabel";
+            this.saloLabel.Size = new System.Drawing.Size(57, 13);
+            this.saloLabel.TabIndex = 6;
+            this.saloLabel.Text = "салоcoin :";
             // 
             // Ya_Terochka
             // 
@@ -141,9 +141,10 @@
             this.BackgroundImage = global::WindowsFormsApplication4.Properties.Resources.ytrk_mini;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(572, 342);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.saloLabel);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.pictureBox1);
+            this.MinimizeBox = false;
             this.Name = "Ya_Terochka";
             this.Text = "Ya_Terochka";
             this.Load += new System.EventHandler(this.Ya_Terochka_Load);
@@ -162,7 +163,7 @@
         private System.Windows.Forms.Button Скины;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label saloLabel;
     }
 }
 

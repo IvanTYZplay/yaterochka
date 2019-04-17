@@ -15,10 +15,14 @@ namespace WindowsFormsApplication4
         public My_Kabinet()
         {
             InitializeComponent();
+
+            System.Drawing.Drawing2D.GraphicsPath oz = Terochka.BuildTransparencyPath(pictureBox10);
+            pictureBox10.Region = new Region(oz);
         }
 
         private void My_Kabinet_Load(object sender, EventArgs e)
         {
+            saloLabel.Text = "салоcoin : " + MagazinForm.money.ToString();
             int x = 0;
             foreach (PictureBox pb in MagazinForm.tovary)
             {
@@ -26,6 +30,11 @@ namespace WindowsFormsApplication4
                 Controls.Add(pb);
                 x = x + pb.Size.Width;
             }
+        }
+
+        private void saloLabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

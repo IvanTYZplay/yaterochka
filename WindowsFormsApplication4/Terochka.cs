@@ -12,7 +12,9 @@ namespace WindowsFormsApplication4
 {
     public partial class Terochka : Form
     {
+        private int ShowPasswordStart = 0;
         Random rnd = new Random();
+
         public Terochka()
         {
             InitializeComponent();
@@ -25,12 +27,13 @@ namespace WindowsFormsApplication4
             System.Drawing.Drawing2D.GraphicsPath gp = BuildTransparencyPath(pictureBox1);
             pictureBox1.Region = new Region(gp);
 
-            System.Drawing.Drawing2D.GraphicsPath gp2 = BuildTransparencyPath(pictureBox2);
-            pictureBox2.Region = new Region(gp2);
+            System.Drawing.Drawing2D.GraphicsPath gp2 = BuildTransparencyPath(ovoshKotoryiTrut);
+            ovoshKotoryiTrut.Region = new Region(gp2);
 
             System.Drawing.Drawing2D.GraphicsPath gp3 = BuildTransparencyPath(pictureBox3);
             pictureBox3.Region = new Region(gp3);
         }
+        
         public static System.Drawing.Drawing2D.GraphicsPath BuildTransparencyPath(PictureBox pb)
         {
             System.Drawing.Drawing2D.GraphicsPath gp = new System.Drawing.Drawing2D.GraphicsPath();
@@ -61,27 +64,115 @@ namespace WindowsFormsApplication4
             }
             bmp.Dispose();
             return gp;
-        }  
+        }
 
+       /// <summary>
+       /// Трение овоща
+       /// </summary>
+       
         private void timer1_Tick(object sender, EventArgs e)
         {
-            pictureBox2.Location = new Point(
+            int CurrentTime = Environment.TickCount;
+
+            bool tovarEst = false;
+            foreach (PictureBox pb in MagazinForm.tovary)
+            {
+                if (ovoshKotoryiTrut.Image == pb.Image)
+                {
+                    tovarEst = true;
+                }
+            }
+
+            //Овощ стерся
+            if (CurrentTime - ShowPasswordStart >= 3000 && 
+                ovoshKotoryiTrut.Visible == true && 
+                tovarEst == true)
+
+            {
+                ovoshKotoryiTrut.Visible = false;
+
+                //Вернуть бабло
+                MagazinForm.money = MagazinForm.money + 200;
+                saloLabel.Text = "салоcoin : " + MagazinForm.money.ToString();
+
+                //Удалить товар из купленных
+                //List<PictureBox> newTovary = MagazinForm.tovary
+                foreach (PictureBox pb in MagazinForm.tovary)
+                {
+                    if (ovoshKotoryiTrut.Image == pb.BackgroundImage)
+                    {
+                        MagazinForm.tovary.Remove(pb);
+                        Terochka_Load(sender, e);
+                        break;
+                    }
+                }
+            }
+
+
+            ovoshKotoryiTrut.Location = new Point(
                 pictureBox1.Location.X + pictureBox1.Size.Width - 220,
-                pictureBox2.Location.Y + (rnd.Next() % 7) - (rnd.Next() % 7));
+                ovoshKotoryiTrut.Location.Y + (rnd.Next() % 4) - (rnd.Next() % 4));
+
+            if (ovoshKotoryiTrut.Location.Y < 0)
+            {
+                ovoshKotoryiTrut.Location = new Point(ovoshKotoryiTrut.Location.X, 0);
+            }
+            //Запиши уже, что Y не может уходить вниз
+            if (ovoshKotoryiTrut.Location.Y < 0)
+            {
+                ovoshKotoryiTrut.Location = new Point(ovoshKotoryiTrut.Location.X, 0);
+            }
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Выбор овоща, который будут тереть
+        /// </summary>
+        private void pictureBoxClick(object sender, EventArgs e)
         {
+            PictureBox pb = (PictureBox)sender;
+            ovoshKotoryiTrut.Image = pb.Image;
+            ovoshKotoryiTrut.Size = new Size(127, 127 * pb.Size.Height / pb.Size.Width);
+            System.Drawing.Drawing2D.GraphicsPath gp2 = BuildTransparencyPath(ovoshKotoryiTrut);
+            ovoshKotoryiTrut.Region = new Region(gp2);
 
+            this.Controls.Remove(pb);
+            MagazinForm.tovary.Remove(pb);
+            ShowPasswordStart = Environment.TickCount;
+            ovoshKotoryiTrut.Visible = true;
         }
 
+        /// <summary>
+        /// Рисуем все купленные овощи
+        /// </summary>
         private void Terochka_Load(object sender, EventArgs e)
         {
+
+            saloLabel.Text = "салоcoin : " + MagazinForm.money.ToString();
+            ShowPasswordStart = Environment.TickCount;           
+
+            int Y = 0;
+            foreach (PictureBox pb in MagazinForm.tovary)
+            {
+                pb.Location = new Point(pb.Location.X * 70 / 200 , Y);
+                
+                pb.Size = new Size(70, 70 * pb.Size.Height / pb.Size.Width);
+                pb.Click += pictureBoxClick;
+                this.Controls.Add(pb);
+            }
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (ovoshKotoryiTrut.Visible == false)
+            {
+                ovoshKotoryiTrut.Visible = true;
+                ShowPasswordStart = Environment.TickCount;
+            }
         }
     }
 }
